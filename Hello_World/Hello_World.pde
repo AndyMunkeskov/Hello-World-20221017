@@ -1,1 +1,2 @@
-println("Hello World");
+//global varibles
+size(); //Able to deploy with fullscreen();
