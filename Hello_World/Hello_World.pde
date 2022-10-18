@@ -6,9 +6,9 @@
 //
 size(700,400); //Able to deploy with fullscreen();
 //
-//Concatenation: , or +
-println("Width =", width, "\tHeight =", height);
-println("Display monitor:", "width:"+displayWidth, "height:"+displayHeight);
+//Concatenation: , or + (i.e Space)
+println("\t\t\tWidth="+width, "\tHeight ="+height);
+println("Display monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
 //
 //Outputting instructions to user when errors with above
 //bru, turn your phone
