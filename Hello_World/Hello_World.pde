@@ -15,16 +15,20 @@ String ls="Landscape or Square", p="portrait", DO="display orientation", instruc
 //
 if ( appWidth < appHeight ) { // Declaring Landscape and square
    println(instruct);
-} else {
-println("Display is very nice ;)");
-if ( appWidth > displayWidth ) { //Fitting Canvas into monitor
-   appWidth=0;
-   appHeight=0;
-   println("Turn your phone or it no workie :(");
  } else {
- //Empty ELSE}
-} //End setp
-void draw() {} //End draw
+    println("Display: Good to Go");
+    if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor Display
+      appWidth=0;
+      appHeight=0;
+      println("STOP, is broken");
+    } else {
+      //Empty ELSE
+    }
+ }
+}//End setp
+void draw() {
+  ellipse(50, 100, 10, 120);
+} //End draw
 //
 void keyPressed() {} //End Keypressed
 //
