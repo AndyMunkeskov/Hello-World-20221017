@@ -22,8 +22,7 @@ if ( appWidth > displayWidth ) { //Fitting Canvas into monitor
    appHeight=0;
    println("Turn your phone or it no workie :(");
  } else {
-   //Empty ELSE
- }
+ //Empty ELSE}
 } //End setp
 void draw() {} //End draw
 //
