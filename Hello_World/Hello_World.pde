@@ -1,6 +1,7 @@
 //global varibles
 int appWidth=1, appHeight=1;
 //
+void setup() {
 //Declaring Display Geometry: Landscape, Square and portrait
 //
 size(1900, 1040); //Able to deploy with fullscreen();
@@ -25,3 +26,12 @@ String ls="Landscape or Square", p="portrait", DO="display orientation", instruc
 String orientation = ( appWidth >= appHeight ) ? ls : p ;
 println(DO, orientation);
 if (orientation == p); println(instruct); //Later, output to CANVAS
+} //End Setup
+//
+void draw() {} //End draw
+//
+void keyPressed() {} //End Keypressed
+//
+void mousePressed() {} //End Mousepressed
+//
+//End Main Program
