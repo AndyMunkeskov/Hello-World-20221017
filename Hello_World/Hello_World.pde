@@ -4,7 +4,7 @@ int appWidth=1, appHeight=1;
 void setup() {
 //Declaring Display Geometry: Landscape, Square and portrait
 //
-size(100, 300); //Able to deploy with fullscreen();
+size(1620, 900); //Able to deploy with fullscreen();
 appWidth = width;
 appHeight = height;
 //Concatenation: , or + (i.e Space)
@@ -27,7 +27,11 @@ if ( appWidth < appHeight ) { // Declaring Landscape and square
  }
 }//End setp
 void draw() {
-  ellipse(50, 100, 10, 120);
+ellipse(450, 350, 450, 350);
+line(1000, 700, 100, 300);
+rect(300, 600, 700, 600);
+square(120, 100, 220);
+triangle(720, 520, 432, 232, 550, 450);
 } //End draw
 //
 void keyPressed() {} //End Keypressed
