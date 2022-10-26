@@ -27,7 +27,12 @@ if ( appWidth < appHeight ) { // Declaring Landscape and square
  }
 }//End setp
 void draw() {
-  background(0); //gray scale & blue issue for night mode
+  //New background Function "covers" old gray scale background()
+  // Night Mode means background cannot have blue // change randome for night mode, hard code "0"
+  background(55); //gray scale (0-255) & blue issue for night mode
+  //
+  //Casting Reminder
+  background( color( r, g, b ) ); //Colour without blue
   ellipse(450, 350, 450, 350);
 line(1000, 700, 100, 300);
 rect(300, 600, 700, 600);
