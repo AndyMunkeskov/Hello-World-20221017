@@ -1,5 +1,8 @@
 //global varibles
 int appWidth=1, appHeight=1;
+color blackDayLight=2557000, red=#FF0303, purple=#C703FF, white=#FEFCFF; //Hexidecimal
+float centerX, centerY, xStart, yStart, widthRect, heightRect;
+float thin, normal, thick=50;
 //
 void setup() {
 //Declaring Display Geometry: Landscape, Square and portrait
@@ -25,6 +28,16 @@ if ( appWidth < appHeight ) { // Declaring Landscape and square
       //Empty ELSE
     }
  }
+ //Population
+  centerX = appWidth * 1/2;
+  centerY = height * 1/2;
+  xStart = centerX - ( appWidth * 1/4 );
+  yStart  = centerY - ( height * 1/4 );
+  widthRect = appWidth * 1/2;
+  heightRect = height * 1/2;
+  thin = appWidth / appWidth ; //1
+  normal = appWidth * 1/70;
+  thick = appWidth * 1/35;
 }//End setp
 void draw() {
   //New background Function "covers" old gray scale background()
@@ -32,10 +45,18 @@ void draw() {
   background(55); //gray scale (0-255) & blue issue for night mode
   //
   //Casting Reminder
-  background( color( r, g, b ) ); //Colour without blue
-  ellipse(450, 350, 450, 350);
+  background( color( 255, 0, 0 ) ); //Colour without blue
+  //
+  background( blackDayLight );
+  strokeWeight( thick );
+  stroke(#FF0303);
+  fill(#C703FF);
+  rect(800, 200, 700, 600);
+  fill(#FEFCFF); //default reset
+  stroke(blackDayLight); //default reset
+  strokeWeight(1); //default reset
+  ellipse(450, 650, 450, 350);
 line(1000, 700, 100, 300);
-rect(300, 600, 700, 600);
 square(120, 100, 220);
 triangle(720, 520, 432, 232, 550, 450);
 } //End draw
