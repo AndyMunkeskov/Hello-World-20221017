@@ -1,10 +1,10 @@
 //global varibles
 int appWidth=1, appHeight=1;
-color blackDayLight=2557000, red=#FF0303, purple=#C703FF, white=#FEFCFF; //Hexidecimal
-color redNightMode=#FF0303, purpleNightMode=#C703FF;
+color blackDayLight=#0595FF, red=#FF0303, purple=#C703FF, background=#FEFCFF; //Hexidecimal
+color redNightMode=#6F120F, purpleNightMode=#094446, backgroundnightMode=#EA7F26;
 float centerX, centerY, xStart, yStart, widthRect, heightRect;
 float thin, normal, thick=50;
-boolean nightMode=false, randomBackground=false;
+boolean grayScale=false, nightMode=false, backgroundColour=false;
 //
 void setup() {
 //Declaring Display Geometry: Landscape, Square and portrait
@@ -44,15 +44,25 @@ if ( appWidth < appHeight ) { // Declaring Landscape and square
 void draw() {
   //New background Function "covers" old gray scale background()
   // Night Mode means background cannot have blue // change randome for night mode, hard code "0"
-  background(55); //gray scale (0-255) & blue issue for night mode
+  if ( grayScale == true )background(55); //gray scale (0-255) & blue issue for night mode
   //
-  //Casting Reminder
-  background( color( 255, 0, 0 ) ); //Colour without blue
-  //
-  background( blackDayLight );
-  strokeWeight( thick );
-  stroke(#FF0303); //redNightMode
-  fill(#C703FF); //purpleNightMode
+  if ( backgroundColour == true) background( color( 255, 0, 0 ) ); //Colour without blue
+  //Casting reminder
+  strokeWeight( thin );
+  if ( nightMode == true)
+  {
+    background ( #EA7F26 );
+    stroke ( #6F120F );
+    fill ( #094446 );
+    
+  }else
+  {
+   stroke(#FF0303); //redNightMode
+   fill(#C703FF); //purpleNightMode 
+}
+  //background( blackDayLight );
+  stroke( #6F120F ); //redNightMode
+  fill( #094446 ); //purpleNightMode
   rect(800, 200, 700, 600);
   fill(#FEFCFF); //default reset
   stroke(blackDayLight); //default reset
@@ -63,8 +73,18 @@ square(120, 100, 220);
 triangle(720, 520, 432, 232, 550, 450);
 } //End draw
 //
-void keyPressed() {} //End Keypressed
+void keyPressed() {
+  grayScale = false;
+  backgroundColour = false;
+ if ( key == 'G' || key == 'g') grayScale = true;
+ if ( key == 'B' || key == 'b') backgroundColour = true;
+ if ( key == 'G' || key == 'g') red = true;
+ if ( key == 'B' || key == 'b') backgroundColour = true;
+} //End Keypressed
 //
-void mousePressed() {} //End Mousepressed
+void mousePressed() {
+ if ( mouseButton == LEFT ) nightMode = true;
+ if ( mouseButton == RIGHT ) nightMode= false;
+} //End Mousepressed
 //
 //End Main Program
