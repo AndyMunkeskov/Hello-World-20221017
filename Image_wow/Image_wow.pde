@@ -54,6 +54,7 @@ if ( appWidth >= picWidth ) {
     picHeightAdjusted = picWidthAdjusted * imageHeightRatio;
   } else {
     //Image smaller than CANVAS needs separate algorithm
+  
   }
 } else {
   //Image smaller than CANVAS, needs separate algorithm
